@@ -1,0 +1,72 @@
+body {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position:center center;
+}
+
+.jumbotron{
+  background: slategrey;
+  
+}
+
+.city{
+  text-align: center;
+  margin-top: 7%;
+}
+
+.local h2{
+  font-size: 2.5em;
+  text-shadow: 2px 2px 2px black;
+  color: white;
+}
+
+.weather{
+  text-align:center;
+}
+
+.degs{
+  margin-left:1em;
+  margin-bottom:1em;
+  display: inline;
+}
+
+.temp{
+  margin-left: 0.3em;
+  display: inline;
+  text-align: center;
+}
+
+.image{
+  display: inline;
+  height: 25%;
+  Width: 25%;
+}
+
+.cond{
+  text-align: center;
+  
+}
+
+.header{
+  font-weight:bold;
+  text-shadow: 2px 2px 5px black;
+  font-size: 4em;
+  text-align:center;
+  color: white;
+}
+
+.sub-header {
+  font-weight:bold;
+  text-shadow: 2px 2px 5px black;
+  font-size: 1em;
+  text-align:center;
+  color: white;
+}
+
+.footer{
+  margin-top: 17%;
+  padding-bottom: 2%;
+  text-align:center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
