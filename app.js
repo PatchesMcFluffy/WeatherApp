@@ -1,44 +1,46 @@
 
 
 $(document).ready(function(){
-  var icon;
-  var geo_options = {
+  let icon;
+  let geo_options = {
     enableHighAccuracy: true,
     timeout: 5000,
     maximumAge: 0
   };
+
 
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(location, error, geo_options);
   }else{
     alert('your browser does not support geolocation');
   }
-// Cash Goelocation Data in Lat and Long variables
+// Cash Goelocation Data
   function location(current){
-   var lat = current.coords.latitude;
-    
-    var long = current.coords.longitude;
+    // latittude
+  let lat = current.coords.latitude;
+    // longitude
+    let long = current.coords.longitude;
   
     //Ajax request for current weather conditions
     $.get("https://api.openweathermap.org/data/2.5/weather?lat="+ lat + "&lon=" + long + "&type=accurate&units=metric&appid=8023c0427a071f0e4e0cf59a29b110fb", function(weather_data) {
-  
-      var icon = weather_data.weather[0].icon;
-      var temp = weather_data.main.temp;
+
+      icon = weather_data.weather[0].icon;
+      let temp = weather_data.main.temp;
       
       // Weather Data passed to HTML classes         
       $('.city').html(weather_data.name + ", " + weather_data.sys.country);
-      $('.image').html("<img src=http://openweathermap.org/img/w/" + icon + ".png>");
-      $('.temp').html(Math.round(temp) + " °C");
-      $('.cond').html(weather_data.weather[0].description);
+      $('#weather-image').html("<img src=http://openweathermap.org/img/w/" + icon + ".png>");
+      $('#temp').html(Math.round(temp) + " °C");
+      $('#cond').html(weather_data.weather[0].description);
       
       //Change degree format button
       $('button').click(function(){
         if( temp === weather_data.main.temp){
           temp = temp * 1.8 + 32;
-         $('.temp').html(Math.round(temp) + " °F"); 
+         $('#temp').html(Math.round(temp) + " °F"); 
         }else if(temp !== weather_data.main.temp){
           temp = weather_data.main.temp;
-          $('.temp').html(Math.round(temp) + " °C");
+          $('#temp').html(Math.round(temp) + " °C");
         }else{};
       });
       

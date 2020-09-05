@@ -1,17 +1,25 @@
 body {
-  background-repeat: no-repeat;
-  background-size: contain;
+  background:rgb(157, 195, 233);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position:center center;
 }
 
-.jumbotron{
+#title {
+  color: rgb(32, 160, 177);
+  text-align:center;
   background: slategrey;
-  
 }
 
-.city{
+.local{
+  display: flex;
+  align-content: center;
+  background-color: bisque;
   text-align: center;
-  margin-top: 7%;
+  margin-top: 10%;
+  width: 50%;
+  height: auto;
+  border-radius: 3%;
 }
 
 .local h2{
@@ -26,26 +34,19 @@ body {
 
 .degs{
   margin-left:1em;
-  margin-bottom:1em;
   display: inline;
 }
 
-.temp{
+#temp{
   margin-left: 0.3em;
   display: inline;
   text-align: center;
 }
 
-.image{
-  display: inline;
-  height: 25%;
-  Width: 25%;
+#weather-image{
+  display: inline-block;
 }
 
-.cond{
-  text-align: center;
-  
-}
 
 .header{
   font-weight:bold;

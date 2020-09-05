@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="text/javascript" href="app.js">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
 </head>
 <body>
 
-<div class="jumbotron">
-  <h1 class="header">Local Weather</h1>
-</div>
+<header id="title">
+  <h1>Current Local Weather</h1>
+</header>
 
 
-  <div class="container-fluid local">
-    <h2 class="city"></h2>
-    <div class="weather">
-      <h2 class="image"></h2>
-      <h2 class="temp"></h2>
+  <div class="container local">
+      <div>
+        <h2 class="city"></h2>
+        <h2 id="cond"></h2>
+        <div class="weather">
+          <h2 id="weather-image"></h2>
+          <h2 id="temp"></h2>
       <button type="button" class="degs btn btn-default btn-sm"><strong>°F / °C</strong></button>
+      </div>
     </div>
-    <h2 class="cond"></h2>
    
     
     
@@ -29,7 +30,10 @@
   
 
 <div class="container-fluid footer">
-  <h5>Created by Jason Lafrance</h5>
+  <h5>Created by Jason Lafrance &copy 2020</h5>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script src="app.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
 </body>
   
