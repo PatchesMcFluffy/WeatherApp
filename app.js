@@ -20,7 +20,7 @@ $(document).ready(function(){
     var long = current.coords.longitude;
   
     //Ajax request for current weather conditions
-    $.get("https://api.openweathermap.org/data/2.5/weather?lat="+ lat + "&lon=" + long + "&type=accurate&units=metric&appid=8023c0427a071f0e4e0cf59a29b110fb", function(weather_data) {
+    $.get("https://api.openweathermap.org/data/2.5/weather?lat="+ lat + "&lon=" + long + "&type=accurate&units=metric&appid=[insert your API key here]", function(weather_data) {
   
       var icon = weather_data.weather[0].icon;
       var temp = weather_data.main.temp;
