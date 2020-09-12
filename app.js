@@ -63,7 +63,7 @@ $(document).ready(function(){
     
   case "03d":
     $('body').css('background-image', 'url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/plane-flying-across-partly-cloudy-sky_-yvbehuxs__F0000.png")');
-    break;
+    break; 
     
   case "03n":
     $('body').css('background-image-image',  'url("http://www.roseparkpsychology.com.au/wp-content/uploads/2016/11/after-hours-psychologist.jpg")');
