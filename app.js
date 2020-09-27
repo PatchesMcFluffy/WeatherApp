@@ -22,10 +22,17 @@ $(document).ready(function(){
     let long = current.coords.longitude;
   
     //Ajax request for current weather conditions
+<<<<<<< HEAD
     $.get("https://api.openweathermap.org/data/2.5/weather?lat="+ lat + "&lon=" + long + "&type=accurate&units=metric&appid=8023c0427a071f0e4e0cf59a29b110fb", function(weather_data) {
 
       icon = weather_data.weather[0].icon;
       let temp = weather_data.main.temp;
+=======
+    $.get("https://api.openweathermap.org/data/2.5/weather?lat="+ lat + "&lon=" + long + "&type=accurate&units=metric&appid=[insert your API key here]", function(weather_data) {
+  
+      var icon = weather_data.weather[0].icon;
+      var temp = weather_data.main.temp;
+>>>>>>> e029c1ddb366109164b71758bd8278698b2c01bd
       
       // Weather Data passed to HTML classes         
       $('.city').html(weather_data.name + ", " + weather_data.sys.country);
@@ -65,7 +72,7 @@ $(document).ready(function(){
     
   case "03d":
     $('body').css('background-image', 'url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/plane-flying-across-partly-cloudy-sky_-yvbehuxs__F0000.png")');
-    break;
+    break; 
     
   case "03n":
     $('body').css('background-image-image',  'url("http://www.roseparkpsychology.com.au/wp-content/uploads/2016/11/after-hours-psychologist.jpg")');
