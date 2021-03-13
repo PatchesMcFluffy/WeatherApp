@@ -27,25 +27,25 @@ $(document).ready(function(){
         let icon = weather_data.weather[0].icon;
         let temp = weather_data.main.temp;
 
-        // Weather Data passed to HTML classes         
-        $('.city').html(weather_data.name + ", " + weather_data.sys.country);
+        // City and country name as well as weather data and icons passed to HTML elements        
+        $('#city').append(weather_data.name + ", " + weather_data.sys.country);
         $('#weather-image').html("<img src=http://openweathermap.org/img/w/" + icon + ".png>");
-        $('#temp').html(Math.round(temp) + " °C");
-        $('#cond').html(weather_data.weather[0].description);
+        $('#temp').html(Math.round(temp) + "°C");
+        $('#cond').append(weather_data.weather[0].description);
 
-        //Change degree format button
+        //Farenhieght and Celcius utton funtionality 
         $('button').click(function () {
           if (temp === weather_data.main.temp) {
             temp = temp * 1.8 + 32;
-            $('#temp').html(Math.round(temp) + " °F");
+            $('#temp').html(Math.round(temp) + "°F");
           } else if (temp !== weather_data.main.temp) {
             temp = weather_data.main.temp;
-            $('#temp').html(Math.round(temp) + " °C");
+            $('#temp').html(Math.round(temp) + "°C");
           } else { };
         });
 
 
-        //Changing backgrounds depending on weather icon     
+        //backgrounds that change to match the time of day and weather conditions     
         switch (icon) {
           case "01d":
             $('body').css('background-image', 'url ("https://www.hdwallpapers.in/walls/morning_sunshine-HD.jpg")');
