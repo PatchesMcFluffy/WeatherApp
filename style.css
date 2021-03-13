@@ -39,12 +39,16 @@ body {
   color: white;
 }
 
-#temps {
+#current_temp {
   display: flex;
   align-items: center;
   font-size: 1.5em;
   text-shadow: 2px 2px 2px black;
   color: white;
+}
+
+#temp {
+  margin-left: 1em;
 }
 
 #weather-image img {
